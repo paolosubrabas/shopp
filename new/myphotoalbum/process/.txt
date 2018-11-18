@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/icon.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+<style>
+	.iframesize{
+	width:100%;
+	padding:1px;
+	height:120%;
+
+}
+#content-area{
+	width:100%;
+	text-align:center;
+	height:500px;
+
+}
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: gray;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.main {
+  padding: 16px;
+  margin-bottom: 30px;
+}
+</style>
+<script type="text/javascript">
+function changeSRC(page)
+{
+	document.getElementById('content').src=page;
+}
+</script>
+</head>
+<body>
+<?php include ('session.php');?>
+
+<div class="navbar">
+   <a href="javascript:changeSRC('home.php')" class="brand-logo"><b>My Photo | Album</b></a>
+  <a href=" "></a>
+  <a href=""></a>
+  <a href=""></a>
+<div style="float:right">
+  <a href="javascript:changeSRC('profile.php')"><b><?php echo $row['email']; ?>
+  <a href=""><i class="sma material-icons" style="color: white;">search</i></a>
+  <a  href=""><i class="small material-icons" style="color: white;">add_a_photo</i>
+  <a href=""><i class="small material-icons" style="color: white;">notifications</i></a>
+  <a href="logout.php"><i class="small material-icons" style="color: white;">power_settings_new</i></a>		
+</div>
+ 
+
+  <div class="main">
+  <h1>Bottom Navigation Bar</h1>
+  <p>Some text some text some text.</p>
+</div>     
+ 
+</div>
+ 
+ <div id="content-area">
+	<iframe  class="iframesize" src="home.php" id="content"  frameborder="0" scrolling="yes" ></iframe>
+
+</div>	
+</body>
+</html>

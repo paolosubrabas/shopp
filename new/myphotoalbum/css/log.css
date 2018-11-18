@@ -1,0 +1,25 @@
+.container{
+
+  align-content: center;
+    background-color: #ee6e73;
+    width: 100px;
+    border: solid #ee6e73;
+    padding: 25px;
+    margin: 25px;
+    height: 120%;
+    margin-left: 800px;
+  }
+  .tb{
+      background: white; 
+    border: 1px solid #ff4c4c;  
+    box-shadow: 0 0 5px 3px #ffa853; 
+    color: #666; 
+    outline: none; 
+    height:23px;  
+      margin-left: 100px;
+  }
+
+.btn{
+  margin-left: 100px;
+
+}

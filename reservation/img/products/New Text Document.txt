@@ -1,0 +1,99 @@
+ function findexts ($filename)
+							{
+								$filename = strtolower($filename) ;
+								$exts = split("[/\\.]", $filename) ;
+								$n = count($exts)-1;
+								$exts = $exts[$n];
+								return $exts;
+							}
+
+
+							$valid_file_extensions = array(".jpg");
+
+							$ext = findexts($_FILES['uploaded']['name']); 
+							$rw=mysql_query("Select * from student_account where uname='$myunames'");
+							$rs=mysql_fetch_array($rw);
+							$myfilename=$rs['id'];
+							
+							$target = "uploaded/";
+							chmod($target, 0777);
+							
+							
+							$target = $target . $myfilename. ".".$ext;
+						
+							//basename( $_FILES['uploaded']['name'])
+							$ok=1;
+							$uploaded_size=$_FILES['uploaded']['size'];
+							$uploaded_type=$_FILES['uploaded']['type'];
+							//This is our size condition
+							if ($uploaded_size > 100000)
+							{
+							//	echo "Your file is too large.<br>";
+								$ok=0;
+								$er=1;
+								chmod($target, 0755);
+							}
+
+							//This is our limit file type condition
+							if ($uploaded_type<>"image/jpeg")
+							{
+							//echo "No PHP files<br>";
+							 
+							  $er=2;
+							  $ok=0;
+							  chmod($target, 0755);
+							}
+
+							$valid_mime_types = array("image/gif","image/png","image/jpeg","image/pjpeg",);
+							if (!in_array($_FILES['uploaded']['type'], $valid_mime_types)) {
+							  $er=2;
+							  $ok=0;
+							  chmod($target, 0755);
+							}
+
+							$file_extension = strrchr($_FILES['uploaded']['name'], ".");
+							if (!in_array($file_extension, $valid_file_extensions)) {
+   							  $er=2;
+							  $ok=0;
+    						}
+
+    						if (@getimagesize($_FILES['uploaded']['tmp_name']) == false) {
+    						  $er=1;
+							  $ok=0;
+    						}
+
+							//Here we check that $ok was not set to 0 by an error
+							if($ok==0){
+							   if($er=='1'){
+                                                                  // echo $er;
+								  chmod($target, 0755);	
+								  header("location: mysettings.php?err=3");
+								}
+								elseif($er=='2'){
+                                                                  //  echo $er;
+								  chmod($target, 0755);
+								  header("location: mysettings.php?err=4");
+								}
+								echo $ok;
+							  }
+							//If everything is ok we try to upload it
+							else
+							{
+								
+								$deleted = unlink($target);
+								if(move_uploaded_file($_FILES['uploaded']['tmp_name'], $target)){	
+									$itworked = writeFileContent($target);					
+									mysql_query("UPDATE student_account SET pic=1 where uname='$myunames'");
+									echo "<META HTTP-EQUIV='refresh' CONTENT='0; URL=mysettings.php'>";
+								}
+								else{
+             								//echo "NOT UPLOADED";
+									header("location: mysettings.php?err=2");
+									chmod($target, 0755);
+								}
+							}
+
+		function writeFileContent($file, $content){
+			chmod($file, 0777);  //changed to add the zero
+    			return true;
+		}

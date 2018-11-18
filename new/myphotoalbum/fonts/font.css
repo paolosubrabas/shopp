@@ -1,0 +1,30 @@
+
+/* latin */
+@font-face {
+  font-family: 'Cookie';
+  font-style: normal;
+  font-weight: 400;
+  src: url(cookie-v7-latin-regular.eot), url(cookie-v7-latin-regular.woff), url(crMuSvy3krjox1JAKfe7Ew.woff2);
+}
+
+/* latin */
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  src:url(comfortaa-v9-latin-regular.eot), url(comfortaa-v9-latin-regular.woff) , url(comfortaa-v9-latin-regular.woff2);
+}
+/* latin */
+@font-face {
+  font-family: 'Norican';
+  font-style: normal;
+  font-weight: 400;
+  src:url(norican-v4-latin-regular.eot), url(norican-v4-latin-regular.woff), url(norican-v4-latin-regular.woff2);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/CWB0XYA8bzo0kSThX0UTuA.woff2);
+}

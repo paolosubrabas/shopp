@@ -1,0 +1,737 @@
+
+input.search{
+	border: none;
+	border-bottom: 1px solid rgba(1, 1, 1, 0.49);
+	padding: 5px 5px 5px 80px;
+	width: 200px;
+	font-size: 12px;
+	margin: 23px 50px 0 0px;
+	transition-duration: 0.2s;
+	background-image:url(../images/search.PNG);
+	background-position:left; 
+	background-repeat:no-repeat
+	}
+
+input.search:focus{
+	padding:5px 5px 5px 17px;
+	}
+p{  margin:0 2% 0 2%;text-align:justify;}
+
+.img2{
+	border-radius:100px;
+	height:50px;
+	width:50px;
+	margin-bottom:2%;
+	}
+.sidebanner{
+	float:right;
+	width:18%; 
+	height:1150px;
+	background-image:url(banner2.png);
+	background-size:100%;
+	border-left: solid 1px #CCC;
+	}
+.imgup{
+	position:fixed;
+	bottom:90px;
+	margin-left:90%;
+	cursor:pointer;
+	display:none;
+	}
+.createmess{
+	position:fixed;
+	bottom:40px;
+	margin-left:90%;
+	cursor:pointer;
+	display:block;
+	}
+div.imgageup{
+	background-image:url(../images/up.png);
+	background-position:center;
+	background-size:120%;
+	width:35px;
+	height:35px;
+	border-radius:100px;
+	}
+div.imgmessage{
+	background-image:url(../images/message.png);
+	background-position:center;
+	background-size:105%;
+	width:38px;
+	height:38px;
+	border-radius:100px;
+	box-shadow: 1px 1px 11px #999;
+	}
+div.createmessagebox{
+	padding:0px 8px 8px 8px;
+	width:250px; 
+	height:300px; 
+	background-color:#FFF;
+	position:fixed; 
+	bottom:0; right:6%; 
+    border-radius: 5px 5px 0 0; 
+	box-shadow: 0 0 13px 0px #dbdbdb; 
+	display:none;
+	}
+
+.content{
+	margin: 0;
+	max-width:1000px; 
+	height:auto;
+	background-color: #F7F7F7;
+	margin-top:64px;
+	overflow:hidden
+	}
+iframe.index{height:600px; width:99.7%; display:none; margin-top:40px;}
+iframe.box{ width:450px; margin-top:11px; border-radius: 4px; height:265px; }
+iframe.sponsored{ width:600px; height: 338px; margin-top:30px}
+#photoup,#mphotoup{display: none}
+.lg1{width:30px; user-select: none;}
+.lg2{width:31px; user-select: none;}
+.lg3{width:31px; user-select: none;}
+
+
+
+
+div.profileinfo{
+	height:auto; 
+	width:37%; 
+	float:right;
+	font-size:13px;
+	padding-top:25px;
+	padding-bottom: 10px;
+	}
+div.user{
+    min-height:125px; 
+	background-color:#FFF; 
+	text-align:left;
+	cursor:default;
+	margin-bottom:10px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
+	padding-bottom: 10px;
+	}
+div.post{
+	width:24.747%; 
+	padding-top:24.747%;
+	margin: 2px 0 0 2px; 
+	background-color:#FFF;
+	background-position:center; 
+	background-size:cover;
+	background-repeat:no-repeat;
+	float:left;
+	cursor:pointer;
+	transition: 0.3s;
+	border-radius:5px;
+	}
+div.post:hover{
+	box-shadow: inset 0 0 20px 20px rgba(255, 153, 0, 0.26);
+	}
+div.feed{
+	width:600px;
+	margin: 30px 0 0 0; 
+	background-color:#FFF;
+	border-radius: 5px;
+	border:solid 1px #EFEFEF;
+	}
+
+div.feedpic{
+	max-width: 100%; 
+	min-height:330px;
+	max-height:730px; 
+	background-color:#FFF;
+	background-position:center; 
+	background-repeat:no-repeat;
+	}
+div.feedtxt{
+	word-wrap: break-word;
+	color: white;
+	font-size: 30px;
+	font-weight: 700;
+	padding: 16% 10% 16% 10%;
+	cursor:default;
+	min-height:auto;
+	font-family:Tahoma, Geneva, sans-serif
+	}
+div.feedhead{
+	height: auto;
+	text-align:left;
+	background-color: #FFF;
+	border-bottom:solid 1px #EFEFEF;
+	border-radius:5px 5px 0 0;
+	padding: 10px;
+	}
+div.feedprof{
+	width:32px;
+	height:32px;
+	background-color:#FFF;
+	border-radius:6px;
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	border: 1px solid #dbdbdb;
+	cursor:pointer
+	}
+div.date{
+	float:right; 
+	padding:10px;
+	font-size:12px;
+	cursor:pointer;
+	}
+div.feedbot{
+	height:auto; 
+	background-color:#FFF; 
+	border-radius:0 0 5px 5px;
+	padding:0 40px 13px 40px;
+	text-align:left;
+	border-top:solid 1px #EFEFEF;
+	overflow:hidden
+	}
+div.feedbutton{
+	border-bottom:solid 1px #EFEFEF; 
+	padding: 5px 0px 0px 2px;
+    height: 42px;
+	margin-bottom:10px;
+	}
+div.like{
+	background-image:url(../images/unlike.png); 
+	height:36px; 
+	width:36px; 
+	background-position:center; 
+	background-repeat:no-repeat; 
+	background-size:90%; 
+	display:inline-block;
+	float:left;
+	cursor:pointer;
+	}
+img.flower{
+	display:none;
+	 -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.3s;
+	}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0.5)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.5)} 
+    to {transform:scale(1)}
+}
+	
+div.likenum{ 
+	margin-bottom:3px;
+	cursor:pointer;
+	}
+span.hide{ display:none}
+div.comment{
+	float:left
+	}
+div.commarea{
+	max-height:300px; 
+	overflow:auto
+	}
+div.report{
+	float:right; 
+	width:50px; 
+	height:15px; 
+	margin-top:13px; 
+	background-image:url(../images/report.png); 
+	background-position:center; 
+	background-repeat:no-repeat; 
+	background-size:70%;
+	cursor:pointer;
+	}
+input.comment{
+	margin:13px 0 0 60px; 
+	width:300px; 
+	border:none
+	}
+input.subcomment:hover{color:#09F}
+p.comm{ margin-top:3px}
+p.c{margin:3px; word-wrap: break-word; text-align:left}
+h4{margin:11px 0 0 45px;}
+h4.spon{ margin:3px 0 0 45px;}
+h4.news{ color:hsl(0, 100%, 65%);}
+.profeditbtn:hover{
+	background-color:#FF9F40;
+	color:#FFF
+	}
+.proflogout{
+	background-image:url(../images/logout.png); 
+	background-color:#FFF; 
+	border: none; 
+	border-radius:2px; 
+	background-position:center; 
+	background-repeat:no-repeat; 
+	background-size: 80%;
+	width:50px; 
+	height:20px;
+	cursor:pointer;
+	}
+.proflogout2{
+	background-color:#FFF; 
+	border: none;
+	font-size:36px;
+	height:20px
+	}
+p.name{ font-size:24px; margin-left:25%;width: 38%;overflow: hidden;}
+input.btn1:hover{
+	background-color:#FF9F40;
+	color:#FFF
+	}
+div.loading{ 
+    height:20px; 
+    background-image:url(../images/uploading.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	display:none;}
+	
+input.follow{
+	background-color:#FF9F40;
+	padding: 5px;
+	border: 1px solid #FF9F40;
+	border-radius:2px;
+	cursor:pointer;
+	transition:.4s;
+	width:90px;
+	color:#FFF;
+	}
+input.follow:hover{
+	background-color:#FF9F40;
+	color:#FFF;
+	}
+div.uploadbox{
+	display:block;
+	height: auto;
+	width: 89%;
+	}
+div.follow{ display:none;}
+div.edit{ display:none}
+div.loginnow{
+	background-color:#FF8700;
+	font-size:14px; 
+	padding:20px;
+	display:none;
+	}
+span#navhide1,#navhide2,#navhide3{ display:none}
+span.ar{position: fixed; top: 40%; left: 80%; cursor:pointer}
+span.al{position: fixed; top: 40%; right: 80%; cursor:pointer}
+input.sfollow{
+	background-color:#FF9F40;
+	padding: 3px;
+	border: 1px solid #FF9F40;
+	border-radius:2px;
+	cursor:pointer;
+	transition:.4s;
+	width:72px;
+	color:#FFF;
+	position: absolute;
+    right: 10px;
+	}
+div.accsearchhead{
+	padding:10px 10px 10px 10px;
+    border-bottom:1px #dbdbdb solid;
+	text-align:left;
+	height:27px;
+	cursor:pointer;
+	}
+div.accsearchhead:hover{background-color: rgba(0, 0, 0, .03);}
+div.accsearchprof{
+	float:left; 
+	margin-right:8px;
+	}
+div.accsearchname{
+	overflow:hidden; 
+	width:170px;
+	float:left
+	}
+div.accnotifname{
+	overflow:hidden;
+	float:left;
+	margin-top:7px;
+	max-width:105px;
+	height:	100%;
+	}
+div.notifinfo{
+	width:332px;
+	 float:left; 
+	 height: 100%;
+    padding: 7px 0 0 0;
+	}
+input#lastpost,div#last,input#post{ display:none;}
+    button.editbtn{
+		width:33.333%; 
+		height:50px; 
+		background-color:#FFF; 
+		border:none; 
+		float:left
+		}
+	button.editbtn2{
+		width:50%; 
+		height:33px;  
+		border:none; 
+		float:left;
+		color: white;
+		cursor:pointer
+		}
+	button.editbtn:active,button.editbtn:focus{
+		border-bottom: 2px solid #333;
+		}
+	button.editbtn:hover{
+		background-color:#F7F7F7;
+		}
+	button.btnphoto{
+		background-color: #00ff7f;
+		}
+	button.btntext{
+		background-color: #6495ed;
+		}
+	div.editbox{
+		height:auto; 
+		width:600px; 
+		box-shadow: 0px 1px 5px #999; 
+		background-color:#FFF; 
+		margin: 40px 0 10px 0; 
+		border-radius: 5px;
+		cursor:default;
+		padding:0 0 45px 0;
+		overflow:hidden
+		}
+	div.editheader{
+		border-bottom: solid 1px #dbdbdb; 
+		height:50px;
+		margin-bottom:50px;
+		}
+div#edit2,div#edit3{ display:none}
+div.ntfimg{ height:30px; width:30px; color:#FFF; border:none;font-size: 6px; text-align: center;overflow: hidden; word-wrap:break-word}
+/*************************************************************************************************/
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 10; 
+    padding:3% 0 4% 0; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 600px;
+	z-index:2;
+	background-color:#F7F7F7;
+}
+/* Add Animation */
+.modal-content{    
+   /* -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;*/
+}
+
+/*@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}*/
+
+/* The Close Button */
+.close {
+    position: fixed;
+    top: 15px;
+    right: 35px;
+    color: #F90;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+	z-index:1;
+}
+
+.close:hover,.close2:hover,
+.close2:focus.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+button.picmenubtn,button.picmenubtn2,button.picmenubtn3,button.logoutmenubtn{ 
+cursor:pointer;height: 50%; width:100%;border:1px; background-color:#FFF;border-radius: 8px; font-size:16px}
+div.logoutmenu, div.picmenu{position:fixed; right:41%; top:43.5%; height:13%; border-radius: 8px; box-shadow: 0 0 20px 0px #999;width:18%;background-color:#FFF;}
+button.logoutmenubtn:hover,button.picmenubtn:hover,button.picmenubtn2:hover,button.picmenubtn3:hover{ color:#F90}
+.modallogout,.modalreport,.modalreport2 {
+    display: none;
+    position: fixed; 
+    z-index: 10; 
+    padding:3% 0 4% 0; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+	background-color: rgba(0,0,0,.5);
+}
+.modalreport2 {background-color: transparent}
+/*************************************************************************************************/
+.close2 {
+	float:right;
+    color: #999;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+	z-index:1;
+}
+div.msgsto{width:90%; float:right;}
+div.msgsfr{width:90%; float:left;}
+.profilemargin{ margin-left:25%; margin-top:15px; font-size:13px;word-wrap: break-word; text-align:left;width: 38%;}
+div.msgto{float:right; padding: 5px;background-color: rgba(255, 153, 0, 0.26);border-radius: 8px; word-wrap:break-word; margin:2px 0 2px 0;max-width: 100%;text-align:right;}
+div.msgfrom{margin:2px 0 2px 0; float: left; padding: 5px; background-color: #f1f1f1; border-radius: 8px; word-wrap:break-word;max-width: 100%; text-align:left}
+div.messages{width:244px; height:180px; margin-bottom:5px;border-radius:3px; border: solid 1px #dbdbdb; padding:2px; overflow-x:hidden; overflow-y:visible;}
+div.userprofilemessage{width:220px; margin-bottom:5px; height:25px; cursor:pointer; overflow:hidden}
+div.userpicmessage{float:left; margin-right:10px}
+img.userpicturemess{border-radius:2px; height:25px; width:25px}
+div.usernamemessage{float:left; text-align:left}
+div.messhere{float:left;overflow:hidden;width:250px; display:none}
+div.usershere{width: 250px;float:left; overflow-x:hidden; overflow-y:auto; height:260px}
+input.searchusertomess{width:200px; padding:2px 2px 2px 10px; font-size:12px;border-radius:2px; border:1px solid #F90; margin-bottom:5px; float:left}
+div.uploadpost{ position:fixed; z-index:11}
+@media screen and (max-width: 1050px) {
+	li.rside{
+	margin-right:12%
+	}
+	li.lside{
+	margin-left:13%
+	}
+	span.al{right:90%}
+	span.ar{left:90%}
+}
+@media screen and (max-width: 999px) {
+	div.profilepic{ height:130px; width:130px; top: 130px;}
+}
+@media screen and (max-width: 940px) {
+	li.rside{
+	margin-right:9%
+	}
+	li.lside{
+	margin-left:10%
+	}
+}
+@media screen and (max-width: 870px) {
+	div.profilecover{ padding-bottom:18%}
+	li.rside{
+	margin-right:4%
+	}
+	li.lside{
+	margin-left:5%
+	}
+}
+@media screen and (max-width: 795px) {
+	div.post{
+	width:33%; 
+	padding-top:33%;
+	}
+	span.al{right:95%}
+	span.ar{left:95%}
+}
+@media screen and (max-width: 785px) {
+	div.user {
+    min-height: 105px;
+	}
+	li.rside{
+	margin-right:0%
+	}
+	li.lside{
+	margin-left:2%
+	}
+	div.imgageup{width:30px;
+	height:30px;
+	}
+	div.imgmessage{width:35px; height:35px}
+}
+@media screen and (max-width: 720px) {
+   .proflogout{ background-size:60%}
+   .profilemargin{ margin-left:27%; margin-top:10px; font-size:12px}
+	p.name {font-size: 16px;margin-left:27%;width:36%}
+	input.profeditbtn { padding:3px}
+	input, textarea { font-size:12px}
+	div.profilecover{ padding-bottom:20%}
+	div.profilepic{ 
+		height:115px;
+		width:115px;
+		top: 120px;
+		}
+	li.lside{
+		display:none
+	}
+	div .logocap{
+		width:142px;
+		margin-left:5%;
+		font-size:24px;
+		border-left:none;
+	}
+	.lg1{width:22px}
+	.lg2{width:23px}
+	.lg3{width:23px}
+	li a.l{padding: 13px 16px 0px 0px}
+	input.search{
+	width: 180px;
+	font-size: 11px;
+	margin: 15px 20px 0 0px;
+	}
+	.content{ margin-top:53px}
+	div.user {
+    min-height: 80px;
+    }
+	.profilemargin{width:36%}
+}
+@media screen and (max-width: 606px) {
+div.post {
+    width: 32.8%;
+    padding-top: 32.8%;
+}
+}
+@media screen and (max-width: 599px) {
+div.feed {
+    width: 100%;
+}
+}
+@media screen and (max-width: 596px) {
+	.profilemargin{ margin-left:5%; margin-top:10px;width:50%}
+	p.name {margin-left:5%;width:50%}
+	input.profeditbtn { padding:3px}
+	input, textarea { font-size:12px}
+	div.profilepic{ height:80px;width:80px; top:70px}
+	div.profileinfo {
+    width: 40%;
+    font-size: 12px;
+    padding-top: 20px;
+}
+div.editbox{
+		width:100%;
+}
+}
+@media screen and (max-width: 560px) {
+	div.profilecover{ padding-bottom:23%}
+	input.profeditbtn { padding:2px;width: 80px;}
+	input[type=submit]{ font-size:11px;}
+	div.profilepic{ top:58px}
+	.modal-content {
+        width: 100%;
+		height: auto;
+    }
+	
+	.content{ margin-top:41px}
+    input.search{
+	width: 100px;
+	padding: 5px 5px 5px 30px;
+	}
+	li a.l{padding: 7px 16px 7px 0px;}
+	div .logocap{
+	 width: 137px;
+	 height:30px;
+     font-size:20px;
+	}
+	li a:not(.l){
+		padding: 11px 16px 0px 16px;}
+	input.search{
+	margin: 10px 20px 0 0px;
+	}
+	div.box2{
+	right:10%;
+	}
+	div.box1 {left: 15%;}
+	div.feedprof {
+    width: 30px;
+    height: 30px;}
+	div.feedhead {
+    padding: 7px;}
+	div.feedbot {
+    padding: 0 20px 10px 16px;}
+	div.feedbutton {
+    padding: 3px 0px 0px 0px;
+    height: 40px;
+    margin-bottom: 8px;
+	}
+	iframe.sponsored { width:100%;}
+}
+@media screen and (max-width: 532px) {
+	div.report { width: 40px;}
+	input.comment {width: 200px;}
+	div.like {
+    height: 30px;
+    width: 30px;
+    background-size: 30px;}
+	}
+@media screen and (max-width: 465px) {
+.createmess {
+    bottom: 45px;
+    margin-left: 85%;}
+.imgup {
+    margin-left: 86%;}
+div.commarea {
+    max-height: 100px;}
+div.profilecover{ padding-bottom:25%}
+input.comment {margin: 13px 0 0 15px;}
+div.profilepic{ height: 60px;
+    width: 60px; top:74px}
+div.profileinfo {
+    width: 45%;}
+div .logocap{
+		width:122px;
+	}
+div.hidenav{
+	display:none;
+	}
+li a:not(.l){
+		padding: 5px 0 4px 0;
+		}
+li a.l{padding: 7px 16px 6px 20px;}
+div.bnav { display:block}
+div.footer{ margin-bottom:40px;
+}
+div.profilecover{ padding-bottom:25%}
+}
+@media screen and (max-width: 414px) {
+::-webkit-scrollbar { width:0px;height:0px;}
+div.logoutmenu{position:fixed; right:0%; top:80%; height:20%; border-radius: 5px; box-shadow: 0 0 20px 0px #999;width:100%;background-color:#FFF;}
+div.post {width: 31.33%;padding-top: 31.33%;margin: 1% 1% 1% 1%; }
+.modal {padding: 15% 0 4% 0;}
+.close {top: 6px;right: 8px;}
+input.search {margin: 8px 39px 0px 0px; border:1px solid #dbdbdb;width: 120px; padding: 5px 5px 5px 42px; border-radius:4px}
+div.profilecover{ padding-bottom: 130px;}
+input.comment { margin: 7px 0 0 15px; width: 190px;}
+div.report {width: 33px; margin-top:8px;}
+div.like {height: 25px;width: 25px;background-size: 25px;}
+div.feed { border:none}
+div.feedbutton {height: 34px; padding: 6px 0px 0px 0px;}
+div.content{ background-color:#FFF;margin-top: 25px;}
+body { background-color: #FFF;}
+div.picmenu {position: fixed;top: 80%;height: 20%;width: 100%;right: 0%;}
+button.picmenubtn, button.picmenubtn2,button.picmenubtn3 {height: 50%;font-size: 15px;}
+div.footer{ font-size:10px;}
+li a.l {padding: 6px 10px 2px 15px;}
+div.profileinfo {width: 152px;}
+div.notifinfo{ width:87%}
+}
+@media screen and (max-width: 340px) {
+p.name{ width:47%}
+.profilemargin{width:47%}
+}
+
+
+
+
+
+
+
+

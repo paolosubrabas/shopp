@@ -1,0 +1,252 @@
+ header('location:viewpost.php');
+  <?php
+  function time_stamp($session_time) 
+  { 
+   
+  $time_difference = time() - $session_time ; 
+  $seconds = $time_difference ; 
+  $minutes = round($time_difference / 60 );
+  $hours = round($time_difference / 3600 ); 
+  $days = round($time_difference / 86400 ); 
+  $weeks = round($time_difference / 604800 ); 
+  $months = round($time_difference / 2419200 ); 
+  $years = round($time_difference / 29030400 ); 
+
+  if($seconds <= 60)
+  {
+  echo"$seconds seconds ago"; 
+  }
+  else if($minutes <=60)
+  {
+     if($minutes==1)
+     {
+       echo"one minute ago"; 
+      }
+     else
+     {
+     echo"$minutes minutes ago"; 
+     }
+  }
+  else if($hours <=24)
+  {
+     if($hours==1)
+     {
+     echo"one hour ago";
+     }
+    else
+    {
+    echo"$hours hours ago";
+    }
+  }
+  else if($days <=7)
+  {
+    if($days==1)
+     {
+     echo"one day ago";
+     }
+    else
+    {
+    echo"$days days ago";
+    }
+
+
+    
+  }
+  else if($weeks <=4)
+  {
+    if($weeks==1)
+     {
+     echo"one week ago";
+     }
+    else
+    {
+    echo"$weeks weeks ago";
+    }
+   }
+  else if($months <=12)
+  {
+     if($months==1)
+     {
+     echo"one month ago";
+     }
+    else
+    {
+    echo"$months months ago";
+    }
+   
+     
+  }
+
+  else
+  {
+  if($years==1)
+     {
+     echo"one year ago";
+     }
+    else
+    {
+    echo"$years years ago";
+    }
+
+  }
+   
+  } 
+
+  ?><!DOCTYPE html>
+  <html>
+  <head>
+     <link rel="stylesheet" type="text/css" href="css/postbox.css">
+          <link rel="stylesheet" type="text/css" href="css/icon.css">
+          <link rel="stylesheet" type="text/css" href="css/materialize.css">
+          <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+  <style> 
+ .fey{
+
+ align-content: center;
+    background-color:  #ee6e73;
+    width: 600px;
+    border: 10px;
+    padding: 25px;
+    margin: 25px;
+    border-radius: 5px;
+    height: 100%;
+     color: #ffb3cc;
+    box-shadow: 20px 20px; 
+
+}
+.rosefel{
+   color: black;
+}
+
+</style>
+
+  </head>
+    <body style="margin-left: 400px;" >
+  <style>
+      .result p{
+          margin: 0;
+          padding: 7px 10px;
+          border: 1px solid blue;
+          border-top: none;
+          cursor: pointer;
+           width: 400px;
+          margin-left: 40px;
+      }
+      .result p:hover{
+          background: blue;
+          width: 400px;
+          margin-left: 60px;
+      }
+  </style>
+  <form><center>
+      <div class="search-box">
+          <input type="text" style="width: 400px; margin-left: 60px;" autocomplete="off" placeholder="Search name  ..." /><i class="small material-icons" style="margin-top: 10px;" >search</i>
+        <div class="result"></div>
+      </div>
+  </form>
+  </center>
+    
+
+  <?php include ('process/session.php');?>
+
+     
+
+  <?php
+      include("includes/database.php");
+              $query=mySQL_query("SELECT * from photo inner JOIN user on user.user_id = photo.user_id order by photo_id DESC") or die(mySQL_error());
+              while($row=mySQL_fetch_array($query)){
+                  $location = $row['post_img'];
+                  $profile_picture = $row['profile_picture'];
+                  $description=$row['description']; 
+                  $photo_id = $row['photo_id'];
+                  $posted_by= $row['posted_by'];
+                  $time=$row['date'];  
+  ?>
+          
+          
+      <div class="fey">
+      
+              <div class="rosefel">
+              <img style="height: 50px; width 50px; " src="<?php echo $profile_picture ?>">
+               &nbsp;<b><?php echo $posted_by?></b>
+              <strong></strong>
+              <hr>
+              </div>
+              <div>
+                  <div class="rosefel">
+                  <p><?php echo $row['description']; ?></p>
+                  <center>
+                  <a href ='viewpost.php?photo_id=<?php echo $row['photo_id'];?>'><img style="height: 300px; width:400px; " src="<?php echo $location ?>"></a> 
+                 </center>
+               <hr class="rosefel" > 
+                  </div>
+             
+          </div>
+          <br><br>    
+      
+  <?php
+  include("includes/database.php");
+      //$comment=mySQL_query("SELECT * from comments where post_id='$post_id' order by post_id DESC") or die(mySQL_error());
+      $comment=mySQL_query("SELECT
+Count(comments.content_comment),
+comments.photo_id
+FROM
+comments
+WHERE
+comments.photo_id = '$photo_id'
+") or die(mySQL_error());
+      while($row=mySQL_fetch_array($comment)){
+
+      $comment_count=$row['Count(comments.content_comment)'];
+    
+      
+?>  
+<div class="rosefel">
+  <i style="color: black;" class="small material-icons" >comment</i><b class="rosefel">comments</b>:<?php echo($comment_count)?>
+  <a href ='viewpost.php?photo_id=<?php echo $row['photo_id'];?>' style="margin-left: 300px; color: black;" ><b>Add comment</b></a>
+
+</div>
+<br><br><br><br>
+ 
+   </div>
+  <br><br>
+              
+      <?php
+  }
+  ?>
+
+                
+      <?php
+  }
+  ?>   
+     
+
+
+
+  </body>  
+  </html>
+  
+  <script src="jquery/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.search-box input[type="text"]').on("keyup input", function(){
+        /* Get input value on change */
+        var inputVal = $(this).val();
+        var resultDropdown = $(this).siblings(".result");
+        if(inputVal.length){
+            $.get("livesearch.php", {term: inputVal}).done(function(data){
+                // Display the returned data in browser
+                resultDropdown.html(data);
+            });
+        } else{
+            resultDropdown.empty();
+        }
+    });
+    
+    // Set search input value on click of result item
+    $(document).on("click", ".result p", function(){
+        $(this).parents(".search-box").find('input[type="text"]').val($(this).text());
+        $(this).parent(".result").empty();
+    });
+});
+</script>
